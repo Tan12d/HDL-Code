@@ -8,7 +8,7 @@
 module circuit1(A, B, C, F)
   input  (A, B, C);
   output F;
-  wires  w1, w2, w3;
+  wire  w1, w2, w3;
   and    G1(w1, A, B);
   not    G2(w2, B);
   and    G3(w3, w2, A, C);
@@ -19,7 +19,7 @@ endmodule
   module circuit1(A, B, C, F)
   input  (A, B, C);
   output F;
-  wires  w1, w2, w3;
+  wire  w1, w2, w3;
     assign  w1 = (A && B);
     assign  w2 = (!B);
     assign  w3 = (A && w2 && c);
