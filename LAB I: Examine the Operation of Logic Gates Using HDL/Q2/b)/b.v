@@ -7,7 +7,7 @@
 module And(A, B, X)
   input  (A, B);
   output X;
-  wires  w1;
+  wire  w1;
   nand   G1(w1, A, B);
   nand   G2(X, w1, w1);
 endmodule
@@ -16,7 +16,7 @@ endmodule
   module And(A, B, X)
   input     (A, B);
   output    X;
-    wires   w1;
+    wire   w1;
     assign  w1 = !(A && B);
     assign  X  = !(w1 && w1);
   endmodule
