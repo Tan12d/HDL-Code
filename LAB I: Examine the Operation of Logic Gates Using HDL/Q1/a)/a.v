@@ -11,7 +11,7 @@ endmodule
 
 // Data-Flow
   module circuit1(A, B, X)
-  input   (A, B);
-  output  X;
+  input     (A, B);
+  output    X;
     assign  X = !(A && B);
   endmodule
