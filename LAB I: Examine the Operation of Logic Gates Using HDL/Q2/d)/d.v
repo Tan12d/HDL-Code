@@ -7,7 +7,7 @@
 module Xor(A, B, X)
   input  (A, B);
   output X;
-  wires  w1, w2, w3;
+  wire  w1, w2, w3;
   nand   G1(w1, A, B);
   nand   G2(w2, A, w1);
   nand   G3(w3, B, w1);
@@ -18,7 +18,7 @@ endmodule
   module circuit1(A, B, X)
   input     (A, B);
   output    X;
-  wires     w1, w2, w3;
+  wire     w1, w2, w3;
     assign  w1 = !(A && B);
     assign  w2 = !(A && w1);
     assign  w3 = !(B && w1);
